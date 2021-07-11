@@ -6,7 +6,7 @@ compile
 make
 ```
 
-after receive SYN ACK kernel would send RST to server so use iptable to drop RST packet
+after receiving SYN ACK kernel would send RST to server so use iptable to drop RST packet
 ```
 sudo iptables -A OUTPUT -p tcp --tcp-flags RST RST -j DROP
 ```
