@@ -48,9 +48,9 @@ unsigned short checkSum(unsigned short *buffer, int size)
 void print_help()
 {
     cout << "usage:" << endl;
-    cout << "\t-s set server ip" << endl;
-    cout << "\t-p set server port (default 4096)" << endl;
-    cout << "\t-i set host ip" << endl;
+    cout << "-s set server ip" << endl;
+    cout << "-p set server port (default 4096)" << endl;
+    cout << "-i set host ip" << endl;
 }
 
 int main(int argc, char *argv[])
