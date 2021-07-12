@@ -192,7 +192,7 @@ int main(int argc, char *argv[])
     cout << "[+] recv SYN ACK from server" << endl;
 
     iphdr *ip_recv = (iphdr *)(recv_packet);
-    tcphdr *tcp_recv = (tcphdr *)(recv_packet + sizeof(tcphdr));
+    tcphdr *tcp_recv = (tcphdr *)(recv_packet + sizeof(iphdr));
     tcp->ack_seq = htonl(ntohl(tcp_recv->seq) + 1);
     tcp->ack = 1;
     tcp->seq = htonl(sequence + 1);
