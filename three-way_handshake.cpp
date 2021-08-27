@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
     srand(time(NULL));
     int command_option;
     in_port_t server_port = 4096;
-    in_addr_t source_port = 3333 % (rand() % (50000 - 3333 + 1)); // random source port in 3333~50000
+    in_addr_t source_port = 3333 + (rand() % (50000 - 3333 + 1)); // random source port in 3333~50000
     char *server_ip, *source_ip, *interface;
     uint32_t sequence = 0;
     int socketfd;
